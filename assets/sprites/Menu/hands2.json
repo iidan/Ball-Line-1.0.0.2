@@ -1,0 +1,83 @@
+{
+	"textures": [
+		{
+			"image": "hands2.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 819,
+				"h": 470
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "hand1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 271,
+						"h": 468
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 271,
+						"h": 468
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 271,
+						"h": 468
+					}
+				},
+				{
+					"filename": "hand2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 271,
+						"h": 468
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 20,
+						"w": 271,
+						"h": 448
+					},
+					"frame": {
+						"x": 274,
+						"y": 1,
+						"w": 271,
+						"h": 448
+					}
+				},
+				{
+					"filename": "hand3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 271,
+						"h": 468
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 35,
+						"w": 271,
+						"h": 433
+					},
+					"frame": {
+						"x": 547,
+						"y": 1,
+						"w": 271,
+						"h": 433
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:aa683acfacce7e4e1fbb23acda56ad22:05b8b18232f0bbf1e9869f4c10ffa7e2:037b4b19a429d4aef61d59168bbb2765$"
+	}
+}

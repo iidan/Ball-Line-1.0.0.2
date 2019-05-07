@@ -1,0 +1,95 @@
+<html>
+
+<body>
+    <table style="margin-top:50px">
+        <tr>
+            <td>
+                <button onclick="postScore()">postScore</button>
+            </td>
+            <td>
+                <input id="scoreInput" type="number" />
+                <span id="errorScore"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button value="GetUserData" id="userDataBtn" onclick="getUserData()">GetUserData
+                </button>
+            </td>
+            <td>
+                <textarea id="userData" rows="3" cols="30"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="saveGame()">SaveGame</button>
+            </td>
+            <td>
+                <input id="saveGame" type="text" />
+                <span id="error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="getSavedGameData()">getGame</button>
+            </td>
+            <td>
+                <input id="getGame" type="textarea" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="getBestScore()">getBestScore</button>
+            </td>
+            <td>
+                <textarea id="bestScore" rows="3" cols="30"></textarea>
+            </td>
+        </tr>
+    </table>
+
+    <script src="playsiveSDK.js"></script>
+
+    <script>
+        var gameData = '';
+        var gameJSON = {};
+
+        function getUserData() {
+            playsiveSDK.getUserInfo();
+        }
+
+        function saveGame() {
+            if (!document.getElementById('saveGame').value) {
+                document.getElementById('error').innerHTML = 'Field cannot be empty';
+                return;
+            }
+            document.getElementById('error').innerHTML = '';
+            gameData = document.getElementById('saveGame').value;
+            gameJSON['key'] = gameData;
+            console.log(JSON.stringify(gameJSON));
+            playsiveSDK.saveGameData(gameJSON);
+        }
+
+        function getSavedGameData() {
+            playsiveSDK.getSavedGameData();
+        }
+
+        function getBestScore() {
+            playsiveSDK.getBestScore();
+        }
+        function postScore() {
+            if (!document.getElementById('scoreInput').value) {
+                document.getElementById('errorScore').innerHTML = 'Field cannot be empty';
+                return;
+            }
+            document.getElementById('errorScore').innerHTML = '';
+            gameScoreStr = document.getElementById('scoreInput').value;
+            gameScore = parseInt(gameScoreStr)
+            playsiveSDK.postScore(gameScore);
+        }
+        window.onload = function () {
+            playsiveSDK.gameLoaded();
+        }
+    </script>
+</body>
+
+</html>

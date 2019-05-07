@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"declaration": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"target": "es6",
+		"module": "commonjs",
+		"sourceMap": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true
+	},
+	"exclude": [
+        "node_modules"
+    ],
+	"compileOnSave": true,
+	"files": [
+		"src/phaser.d.ts",
+		"src/main.ts"
+	]
+}
